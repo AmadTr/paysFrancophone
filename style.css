@@ -11,6 +11,11 @@ h1{
     color: white;
     text-align: center;
 }
+p{
+    color: white;
+    font-size: 2em;
+    padding:0 5%;
+}
 
 ul{
     display: flex;
@@ -23,6 +28,7 @@ li{
     border-bottom: solid 2px white;
     width: 100%;
     list-style-type: none;
+    margin-bottom: 5%;
     
 }
 a{
@@ -33,5 +39,8 @@ a{
     background-color: rgb(85, 84, 110);
     border-radius: 5px;
     color: white;
-
+}
+img{
+    padding-left: 5%;
+    height: 10vh;
 }

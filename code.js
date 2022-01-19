@@ -20,8 +20,8 @@ function showCountryByContinent(continent){
                  let drapeau;
                  for (const countries of world) {
                      if (countries.region.includes(continent)) {
-                         affichePays.innerHTML += countries.name.common + "<br>";
-                         affichePays.innerHTML += countries.capital + "<br>";
+                         affichePays.innerHTML += "<p>"+"Nom : "+countries.name.common +"</p>";
+                         affichePays.innerHTML += "<p>"+"Capital : "+countries.capital + "</p>";
                          drapeau = countries.flags.png;
                          affichePays.innerHTML += '<img src=' + drapeau +' alt="drapeau pays">'+"<br>"+"<br>";
                          console.log(drapeau);
