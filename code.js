@@ -2,7 +2,7 @@ let btnAfr = document.getElementById("afrique");
 let btnAmq = document.getElementById("ameriques");
 let btnAsie = document.getElementById("asie");
 let btnEur = document.getElementById("europe");
-let affichePays = document.querySelector("div")
+let affichePays = document.querySelector("div");
 
 
 function showCountryByContinent(continent){
@@ -13,21 +13,23 @@ function showCountryByContinent(continent){
 
      req.send();
      req.onload = () => {
-         if (req.readyState == XMLHttpRequest.DONE)
+         if (req.readyState == XMLHttpRequest.DONE){
              if (req.status == 200) {
 
                  let world = req.response;
-                 console.log(world);
+                 let drapeau;
                  for (const countries of world) {
-                     if (countries.continents.includes(continent)) {
-                             console.log(countries);
-                             affichePays.innerHTML += countries.name.common + "<br>";
-                             affichePays.innerHTML += countries.capital + "<br>"+"<br>";
-//                           affichePays.innerHTML += '<img src= "country.flags.png" alt="drapeau">'+"<br>";
+                     if (countries.region.includes(continent)) {
+                         affichePays.innerHTML += countries.name.common + "<br>";
+                         affichePays.innerHTML += countries.capital + "<br>";
+                         drapeau = countries.flags.png;
+                         affichePays.innerHTML += '<img src=' + drapeau +' alt="drapeau pays">'+"<br>"+"<br>";
+                         console.log(drapeau);
 
                 }
             }
         }
+    }
     }
 }
 
